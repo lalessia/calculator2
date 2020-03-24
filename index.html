@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+        <!-- <script src="https://code.jquery.com/jquery-3.4.1.js"></script> -->
+        <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    </head>
+    <body>
+        <h1>Calculator</h1>
+        <div class="calculatorContainer">
+            <div class="marginCalculator"></div>
+            <div class="calculator">
+                <div class="screen">
+                    <div id="inputByUser" class="sectionInput"><div id="strinput"></div></div>
+                    <!-- &#9633; quadrato per input mancanti-->
+                    <div class="sectionResult"><div id="result"></div></div>
+                </div>
+                <div class="arrowButtonContainer">
+                    <div class="arrowButton arrowButtonLeft" onclick="shiftPipeToLeft()">&#8592;</div>
+                    <div class="arrowButton arrowButtonRight" onclick="shiftPipeToRight()">&#8594;</div>
+                </div>
+                <div class="functionButtonContainer">
+                    <div class="functionButton" onclick="getInput('<sup>|</sup>sqrtn(')"><sup>n</sup>&radic;</div>
+                    <div class="functionButton" onclick="getInput('sqrt2')">&radic;</div>
+                    <div class="functionButton" onclick="getInput('<sup>2</sup>')">x<sup>2</sup></div>
+                    <div class="functionButton" onclick="getInput('<sup>')">x<sup>y</sup></div>
+                    <div class="functionButton" onclick="getInput('!')">x!</div>
+                    <div class="functionButton" onclick="getInput('<sup>-1</sup>')">x<sup>-1</sup></div>
+                    <div class="functionButton" onclick="getInput('(')">(</div>
+                    <div class="functionButton" onclick="getInput(')')">)</div>
+                    <div class="functionButton" onclick="getInput('pi')">&#960;</div>
+                    <div class="functionButton" onclick="getInput('sen(')">sen</div>
+                    <div class="functionButton" onclick="getInput('cos(')">cos</div>
+                    <div class="functionButton" onclick="getInput('tg(')">tg</div>
+                    <div class="functionButton" onclick="inprogress('%')">%</div>
+                    <div class="functionButton" onclick="getInput('arcsin(')">arsen</div>
+                    <div class="functionButton" onclick="getInput('arccos(')">arcos</div>
+                    <div class="functionButton" onclick="getInput('arctg(')">artg</div>
+                    <div class="functionButton" onclick="inprogress('C')">nCr</div>
+                    <div class="functionButton" onclick="getInput('ln(')">ln</div>
+                    <div class="functionButton" onclick="getInput('log(')">log</div>
+                    <div class="functionButton" onclick="getInput('e<sup>')">e<sup>x</sup></div>
+                    <div class="functionButton" onclick="inprogress('10supx')">10<sup>x</sup></div>
+                    <div class="functionButton" onclick="inprogress('MC')">MC</div>
+                    <div class="functionButton" onclick="inprogress('M')">M</div>
+                    <div class="functionButton" onclick="inprogress('MR')">MR</div>
+                </div>
+                <div class="basicButtonContainer">
+                    <div class="basicButton" onclick="getInput('7')">7</div>
+                    <div class="basicButton" onclick="getInput('8')">8</div>
+                    <div class="basicButton" onclick="getInput('9')">9</div>
+                    <div class="basicButton" onclick="removeLastInput()">DEL</div>
+                    <div class="basicButton" onclick="removeInput()">AC</div>
+                    <div class="basicButton" onclick="getInput('4')">4</div>
+                    <div class="basicButton" onclick="getInput('5')">5</div>
+                    <div class="basicButton" onclick="getInput('6')">6</div>
+                    <div class="basicButton" onclick="getInput('*')">*</div>
+                    <div class="basicButton" onclick="getInput('/')">/</div>
+                    <div class="basicButton" onclick="getInput('1')">1</div>
+                    <div class="basicButton" onclick="getInput('2')">2</div>
+                    <div class="basicButton" onclick="getInput('3')">3</div>
+                    <div class="basicButton" onclick="getInput('+')">+</div>
+                    <div class="basicButton" onclick="getInput('-')">-</div>
+                    <div class="noButton"></div>
+                    <div class="basicButton" onclick="getInput('0')">0</div>
+                    <div class="basicButton" onclick="getInput('.')">.</div>
+                    <div class="basicButton" onclick="getInput('ANS')">ANS</div>
+                    <div class="basicButton" onclick="getResult()">=</div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="eventListener.js"></script>
+</html>
